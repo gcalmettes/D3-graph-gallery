@@ -5,12 +5,21 @@
 
   <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
     <meta charset="utf-8">
     <title>Basic upset plot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Using d3.js to create a very basic histogram">
     <meta name="keywords" content="Data,Dataviz,Datavisualization,Javascript, JS, d3.js">
     <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="../img/logo/D3_single_small.png">
 
     <meta property="og:title" content="Very basic histogram in d3.js">
     <meta property="og:image" content="img/overview_RGG.png">
@@ -154,10 +163,10 @@
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz" style="border: solid; border-width: 1px"></div>
+<div id="my_dataviz" style="border: 1px solid;"></div>
 
 </xmp></code></pre>
 <!-- ==================================== -->
@@ -203,7 +212,7 @@ var keys = data.map(function(d){return d.key})
 // Add X axis of the main part. Used for both main bars and the dot grid
 var x = d3.scaleBand()
   .domain(keys)
-  .range([ 0+width*proportionLeft, width ])
+  .range([ width * proportionLeft, width ])
   .padding(0.2)
 svg.append("g")
   .attr("transform", "translate(0," + height*proportionTop + ")")

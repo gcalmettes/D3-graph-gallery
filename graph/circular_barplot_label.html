@@ -3,6 +3,14 @@
 
 <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
   <script>
@@ -19,6 +27,7 @@
   <meta name="description" content="Using d3.js to create a circular barplot with labels written on top of each bar. A post with explanation and reproducible code.">
   <meta name="keywords" content="Data, Dataviz, Datavisualization, Javascript, JS, d3.js, circular barplot">
   <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="../img/logo/D3_single_small.png">
 
   <meta property="og:title" content="Displaying label on a circular barplot in d3.js">
   <meta property="og:image" content="https://www.d3-graph-gallery.com/img/logo/D3_full_medium.png">
@@ -144,7 +153,7 @@ $(function(){
           <br>
           <li>Almost the same chart that the previous <a href="circular_barplot_basic.html">basic circular barplot</a>.</li>
           <br>
-          <li>One more code chunk is added for text labels. Positionning the x and y position of labels is easy using the existing scales.</li>
+          <li>One more code chunk is added for text labels. Positioning the x and y position of labels is easy using the existing scales.</li>
           <br>
           <li>However, the <u>orientation</u> and <u>text-anchoring</u> is pretty hard. A good amount of calculation is needed to flip labels upside down when needed.</li>
           <br>
@@ -168,10 +177,10 @@ $(function(){
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Function for radial charts -->
-<script src="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/LIB/d3-scale-radial.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>

@@ -3,6 +3,14 @@
 
 <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
   <script>
@@ -19,6 +27,7 @@
   <meta name="description" content="Using d3.js to create a very basic circular barplot. A post with explanation and reproducible code.">
   <meta name="keywords" content="Data, Dataviz, Datavisualization, Javascript, JS, d3.js, circular barplot">
   <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="../img/logo/D3_single_small.png">
 
   <meta property="og:title" content="Basic circular barplot in d3.js">
   <meta property="og:image" content="https://www.d3-graph-gallery.com/img/logo/D3_full_medium.png">
@@ -144,7 +153,7 @@ $(function(){
           <br>
           <li>The X scale is defined using a <code>scaleBand</code> as for a normal <a href="../barplot.html">barplot</a>. However then range usually goes between 0 and 2Pi for a complete circle.</li>
           <br>
-          <li>The Y scale takes advantage of the <code>scaleRadial()</code> function. A <code>scaleLinear()</code> would work as well, but would visually inflate the imprtance of high values as explained <a href="https://www.data-to-viz.com/graph/circularbarplot.html">here</a> and <a href="https://github.com/d3/d3-scale/issues/90">here</a>.</li>
+          <li>The Y scale takes advantage of the <code>scaleRadial()</code> function. A <code>scaleLinear()</code> would work as well, but would visually inflate the importance of high values as explained <a href="https://www.data-to-viz.com/graph/circularbarplot.html">here</a> and <a href="https://github.com/d3/d3-scale/issues/90">here</a>.</li>
           <br>
           <li>Bars are then added using a <code>path</code> and not a <code>rect</code>. The <code>d3.arc()</code> is a life saver here, learn more about how it works <a href="https://www.d3-graph-gallery.com/graph/shape.html">here</a>.</li>
           <br>
@@ -168,10 +177,10 @@ $(function(){
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Function for radial charts -->
-<script src="https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/LIB/d3-scale-radial.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>

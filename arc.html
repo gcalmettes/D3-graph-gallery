@@ -3,6 +3,14 @@
 
   <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
     <script>
@@ -20,6 +28,7 @@
     <meta name="description" content="Arc diagram with Javascript and D3.js: a set of simple examples with reproducible code.">
     <meta name="keywords" content="Data,Dataviz,Datavisualization,Javascript,D3,D3.js,sankey, flow chart">
     <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="img/logo/D3_single_small.png">
 
     <meta property="og:title" content="Arc diagram &#124; the D3 Graph Gallery">
     <meta property="og:image" content="img/overview_RGG.png">
@@ -101,7 +110,7 @@ $(function(){
         </li>
       </ul>
       <br><br>
-      <p style="max-width: 700px; margin: auto">An <a href="https://www.data-to-viz.com/graph/arc.html">arc diagram</a> is a special kind of <a href="network.html">network</a> graph. It is consituted by <u>nodes</u> that represent entities and by <u>links</u> that show relationships between entities. In arc diagrams, nodes are displayed along a <u>single axis</u> and links are represented with <u>arcs</u></p>
+      <p style="max-width: 700px; margin: auto">An <a href="https://www.data-to-viz.com/graph/arc.html">arc diagram</a> is a special kind of <a href="network.html">network</a> graph. It is constituted by <u>nodes</u> that represent entities and by <u>links</u> that show relationships between entities. In arc diagrams, nodes are displayed along a <u>single axis</u> and links are represented with <u>arcs</u></p>
   </div>
 </header>
 
@@ -212,7 +221,7 @@ $(function(){
     <br><br><br><br>
     <div class="mySeryTitle">Selection of blocks</div>
     <hr>
-    <p>A few blocks with more complicated codes to showcase what's possible to do with arc diagram.</a>
+    <p>A few blocks with more complicated codes to showcase what's possible to do with arc diagram.</p>
     <div id="portfolio-items" class="row">
       <div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link" href="https://bl.ocks.org/rpgove/53bb49d6ed762139f33bdaea1f3a9e1c">
@@ -349,7 +358,7 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/d
       .attr("transform", function(d){ return( "translate(" + (x(d.name)) + "," + (height-15) + ")rotate(-45)")})
       .style("font-size", 6)
 
-  // Add the highlighting functionnality
+  // Add the highlighting functionality
   nodes
     .on('mouseover', function (d) {
       // Highlight the nodes: every node is green except of him
@@ -359,9 +368,9 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/d
         .style('opacity', 1)
       // Highlight the connections
       links
-        .style('stroke', function (link_d) { return link_d.source === d.id | link_d.target === d.id ? color(d.grp) : '#b8b8b8';})
-        .style('stroke-opacity', function (link_d) { return link_d.source === d.id | link_d.target === d.id ? 1 : .2;})
-        .style('stroke-width', function (link_d) { return link_d.source === d.id | link_d.target === d.id ? 4 : 1;})
+        .style('stroke', function (link_d) { return link_d.source === d.id || link_d.target === d.id ? color(d.grp) : '#b8b8b8';})
+        .style('stroke-opacity', function (link_d) { return link_d.source === d.id || link_d.target === d.id ? 1 : .2;})
+        .style('stroke-width', function (link_d) { return link_d.source === d.id || link_d.target === d.id ? 4 : 1;})
       labels
         .style("font-size", function(label_d){ return label_d.name === d.name ? 16 : 2 } )
         .attr("y", function(label_d){ return label_d.name === d.name ? 10 : 0 } )

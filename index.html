@@ -3,6 +3,14 @@
 
 <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,6 +19,16 @@
 
     gtag('config', 'UA-79254642-6');
   </script>
+  <script>
+  var getOutboundLink = function(url) {
+    gtag('event', 'click', {
+      'event_category': 'outbound',
+      'event_label': url,
+      'transport_type': 'beacon',
+      'event_callback': function(){document.location = url;}
+    });
+  }
+  </script>
 
   <meta charset="utf-8">
   <title>The D3 Graph Gallery &#8211; Simple charts made with d3.js</title>
@@ -18,6 +36,7 @@
   <meta name="description" content="The D3 graph gallery displays hundreds of charts made with D3.js, always providing the reproducible code.">
   <meta name="keywords" content="Data,Dataviz,Datavisualization,Javascript,D3,D3.js">
   <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="img/logo/D3_single_small.png">
   <meta property="og:title" content="The D3 Graph Gallery &#8211; Simple charts made in d3.js">
   <meta property="og:image" content="img/overview_RGG.png">
   <meta property="og:description" content="The D3 graph gallery displays hundreds of charts made with D3.js, always providing the reproducible code.">
@@ -102,7 +121,15 @@ $(function(){
         </li>
       </ul>
       <br><br>
-      <p style="max-width: 700px; margin: auto">Welcome the D3.js graph gallery: a collection of <u>simple</u> charts made with <a href="">d3.js</a>.<br>D3.js is a <u>JavaScript</u> library for manipulating documents based on data. This gallery displays hundreds of chart, always providing reproducible & editable source code.</p>
+      <p style="max-width: 700px; margin: auto">
+        Welcome to the D3.js graph gallery: a collection of <u>simple</u> charts
+        made with <a href="">d3.js</a>.<br>D3.js is a <u>JavaScript</u> library
+        for manipulating documents based on data. This gallery displays hundreds of
+        chart, always providing reproducible & editable source code. If you're new
+        to javascript and web development, this
+        <a href="https://pluralsight.pxf.io/LdKnj" onclick="getOutboundLink('https://pluralsight.pxf.io/LdKnj'); return false;">online course</a>
+        is probably the place to start.
+      </p>
   </div>
 </header>
 
@@ -115,9 +142,6 @@ $(function(){
   $("#position_for_images").load("../html_chunk/images.html");
 });
 </script>
-
-
-
 
 
 

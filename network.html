@@ -3,6 +3,14 @@
 
   <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
     <script>
@@ -12,6 +20,16 @@
 
       gtag('config', 'UA-79254642-6');
     </script>
+    <script>
+    var getOutboundLink = function(url) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon',
+        'event_callback': function(){document.location = url;}
+      });
+    }
+    </script>
 
     <meta charset="utf-8">
     <title>Network Graph &#124; the D3 Graph Gallery</title>
@@ -20,6 +38,7 @@
     <meta name="description" content="How to build a network chart with Javascript and D3.js: from the most basic example to highly customized examples.">
     <meta name="keywords" content="Data,Dataviz,Datavisualization,Javascript,D3,D3.js,network graph">
     <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="img/logo/D3_single_small.png">
 
     <meta property="og:title" content="Network Graph &#124; the D3 Graph Gallery">
     <meta property="og:image" content="img/overview_RGG.png">
@@ -117,8 +136,7 @@ $(function(){
 
 
 
-<!-- ======================== PORTFOLIO SECTION ============================ -->
-<!-- Images must be 480 x 480, resize them with ./script_reformat_img.sh output_name.png -->
+
 <section class="bg" id="portfolio" style="padding-top: 10px">
   <div class="container">
 
@@ -167,11 +185,31 @@ $(function(){
           <a class="collapsed" data-toggle="collapse" href="#collapseSummary2" aria-expanded="false" aria-controls="collapseSummary"></a>
         </div>
       </div>
+    </div>
 
   </div>
+</section>
 
 
 
+
+<section class="bg-light" id="portfolio" style="padding-top: 20px; padding-bottom: 20px;">
+  <div class="container">
+    <div class = "row">
+      <div class = "col-md-2  col-sm-2 align-self-center">
+        <img src="img/other/workinprogress2.png" width="120px"></img>
+      </div>
+      <div class = "col-md-10  col-sm-10 align-self-center">
+        <p>This section is a work in progress. Please have a look to this <a href="https://pluralsight.pxf.io/b1GYB" onclick="getOutboundLink('https://pluralsight.pxf.io/b1GYB'); return false;">ressource</a> for an introduction to force layout to build network charts with d3.js</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="bg" id="portfolio" style="padding-top: 10px">
+  <div class="container">
 
     <br><br><br><br>
     <div class="mySeryTitle">Step by step</div>
@@ -220,9 +258,9 @@ $(function(){
         <a class="portfolio-link" href="https://beta.observablehq.com/@mbostock/d3-force-directed-graph">
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
-              <p>Network of character co-occurence in <i>Les Misérables</i></p>
+              <p>Network of character co-occurrence in <i>Les Misérables</i></p>
               <hr>
-              <p class="explanation_portfolio">A famous network graph by Mike Bostock showing character co-occurence in a book.</p>
+              <p class="explanation_portfolio">A famous network graph by Mike Bostock showing character co-occurrence in a book.</p>
             </div>
           </div>
           <img class="img-fluid showBlock" src="img/block/block_networkMiserable.png" alt="network graph les miserables">

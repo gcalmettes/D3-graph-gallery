@@ -3,6 +3,14 @@
 
 <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
   <script>
@@ -19,6 +27,7 @@
   <meta name="description" content="Using d3.js to create a very basic correlogram: reproducible code with explanation">
   <meta name="keywords" content="Data, Dataviz, Datavisualization, Javascript, JS, d3.js, correlogram">
   <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="../img/logo/D3_single_small.png">
 
   <meta property="og:title" content="Basic correlogram in d3.js">
   <meta property="og:image" content="https://www.d3-graph-gallery.com/img/logo/D3_full_medium.png">
@@ -146,7 +155,7 @@
           <br>
           <li>It is then possible to use <code>.filter</code> to add text to the lower left part of the matrix.</li>
           <br>
-          <li>And then the upperpart using <code>.circle</code></li>
+          <li>And then the upper part using <code>.circle</code></li>
         </ul>
       </div>
     </div>
@@ -166,7 +175,7 @@
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
@@ -253,7 +262,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
     .filter(function(d){
       var ypos = domain.indexOf(d.y);
       var xpos = domain.indexOf(d.x);
-      if (xpos > ypos) { return false } else { return true}
+      return xpos <= ypos;
     })
     .append("text")
       .attr("y", 5)
@@ -280,7 +289,7 @@ d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/da
     .filter(function(d){
       var ypos = domain.indexOf(d.y);
       var xpos = domain.indexOf(d.x);
-      if (xpos <= ypos) { return false } else { return true}
+      return xpos > ypos;
     })
     .append("circle")
       .attr("r", function(d){ return size(Math.abs(d.value)) })

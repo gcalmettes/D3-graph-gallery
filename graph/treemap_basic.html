@@ -3,6 +3,14 @@
 
 <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
   <script>
@@ -19,6 +27,7 @@
   <meta name="description" content="Using d3.js to create a very basic treemap: example with reproducible code.">
   <meta name="keywords" content="Data, Dataviz, Datavisualization, Javascript, JS, d3.js, treemap">
   <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="../img/logo/D3_single_small.png">
 
   <meta property="og:title" content="Basic treemap in d3.js">
   <meta property="og:image" content="https://www.d3-graph-gallery.com/img/logo/D3_full_medium.png">
@@ -138,11 +147,11 @@ $(function(){
           <br>
           <li>The first part of the javascript code set a <code>svg</code> area. It specify the chart size and its margin. <a href="">Read more</a>.</li>
           <br>
-          <li>The input dataset used here is stored at the .csv format. The <code>d3.stratify()</code> function is thus needed for reformating. <a href="https://github.com/d3/d3-hierarchy#stratify">read more</a>. </li>
+          <li>The input dataset used here is stored at the .csv format. The <code>d3.stratify()</code> function is thus needed for reformatting. <a href="https://github.com/d3/d3-hierarchy#stratify">read more</a>. </li>
           <br>
           <li>Then, the <code>d3.treemap()</code> function can be used to compute the rectangle coordinates of each entity of the hierarchy.</li>
           <br>
-          <li>Finally, it is possible to use these coordinates to add rectangles and labels with <code>rect</code> and <code>text</code>.</br>
+          <li>Finally, it is possible to use these coordinates to add rectangles and labels with <code>rect</code> and <code>text</code>.</li>
         </ul>
       </div>
     </div>
@@ -162,7 +171,7 @@ $(function(){
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>

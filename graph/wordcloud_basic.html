@@ -3,6 +3,14 @@
 
 <head>
 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3523953066677938",
+            enable_page_level_ads: true
+       });
+  </script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
   <script>
@@ -19,6 +27,7 @@
   <meta name="description" content="Using d3.js to create a very basic wordcloud">
   <meta name="keywords" content="Data, Dataviz, Datavisualization, Javascript, JS, d3.js, wordcloud">
   <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="../img/logo/D3_single_small.png">
 
   <meta property="og:title" content="Basic wordcloud in d3.js">
   <meta property="og:image" content="https://www.d3-graph-gallery.com/img/logo/D3_full_medium.png">
@@ -146,11 +155,11 @@ $(function(){
           <br>
           <li>In this example dummy data are created. It's a vector format. See <a href="">here</a> to work from a <code>.csv</code></li>
           <br>
-          <li>The wordcloud is then drawn thanks to the <code>d3-cloud</code> plugin. The first step is to set the <code>layout</code>. Basically, it runs an algorythm that compute the position of each word.</li>
+          <li>The wordcloud is then drawn thanks to the <code>d3-cloud</code> plugin. The first step is to set the <code>layout</code>. Basically, it runs an algorithm that compute the position of each word.</li>
           <br>
-          <li>The built object has all the requested features to draw words on by one.</br>
+          <li>The built object has all the requested features to draw words on by one.</li>
           <br>
-          <li>See the <a href="wordcloud_custom.html">next post</a> for cusomization</br>
+          <li>See the <a href="wordcloud_custom.html">next post</a> for customization</li>
         </ul>
       </div>
     </div>
@@ -170,10 +179,10 @@ $(function(){
 <meta charset="utf-8">
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Load d3-cloud -->
-<script src="../LIB/d3.layout.cloud.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
@@ -205,7 +214,7 @@ var svg = d3.select("#my_dataviz").append("svg")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-// Constructs a new cloud layout instance. It run an algorythm to find the position of words that suits your requirements
+// Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
 var layout = d3.layout.cloud()
   .size([width, height])
   .words(myWords.map(function(d) { return {text: d}; }))

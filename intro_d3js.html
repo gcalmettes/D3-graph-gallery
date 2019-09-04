@@ -3,6 +3,14 @@
 
   <head>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-3523953066677938",
+              enable_page_level_ads: true
+         });
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79254642-6"></script>
     <script>
@@ -12,17 +20,28 @@
 
       gtag('config', 'UA-79254642-6');
     </script>
+    <script>
+    var getOutboundLink = function(url) {
+      gtag('event', 'click', {
+        'event_category': 'outbound',
+        'event_label': url,
+        'transport_type': 'beacon',
+        'event_callback': function(){document.location = url;}
+      });
+    }
+    </script>
 
     <meta charset="utf-8">
-    <title>An introduction to <code>d3.js</code> in 10 basic examples</title>
+    <title>An introduction to d3.js in 10 basic examples</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A set of 10 basic examples leading to a first chart made with d3.js. Discover the basics: html, css, scg, scale, data binding and more.">
+    <meta name="description" content="A set of 10 basic examples leading to a first chart made with d3.js. Discover the basics: html, css, svg, scale, data binding and more. Explanation and editable code provided">
     <meta name="keywords" content="Data,Dataviz,Datavisualization,Javascript, JS, d3.js, axis, x, y">
     <meta name="author" content="Yan Holtz">
+  <link rel="icon" href="img/logo/D3_single_small.png">
 
     <meta property="og:title" content="An introduction to d3.js in 10 basic examples.">
     <meta property="og:image" content="img/overview_RGG.png">
-    <meta property="og:description" content="A set of 10 basic examples leading to a first chart made with d3.js. Discover the basics: html, css, scg, scale, data binding and more.">
+    <meta property="og:description" content="A set of 10 basic examples leading to a first chart made with d3.js. Discover the basics: html, css, svg, scale, data binding and more. Explanation and editable code provided.">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -102,7 +121,12 @@
             </li>
           </ul>
           <br><br>
-          <p style="max-width: 700px; margin: auto"><a href="https://d3js.org">D3.js</a> is a <u>JavaScript library</u> for manipulating documents based on data. It allows to build absolutely <a href="all.html">any type of data visualization</a>. This document displays 10 interactive examples illustrating the key concepts of d3, leading to a first basic scatterplot.</p>
+          <p style="max-width: 700px; margin: auto">
+            <a href="https://d3js.org">D3.js</a> is a <u>JavaScript library</u> for manipulating
+            documents based on data. It allows to build absolutely <a href="all.html">any type of
+              data visualization</a>. This document displays 10 interactive examples illustrating the
+              key concepts of d3, leading to a first basic scatterplot. Note that this <a href="https://pluralsight.pxf.io/LdKnj" onclick="getOutboundLink('https://pluralsight.pxf.io/LdKnj'); return false;">online course</a> 
+              is a great ressource to get you started with web development.</p>
       </div>
     </header>
 
@@ -435,7 +459,7 @@ document.getElementById('code-svg').addEventListener("input", function() {
 </svg>
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 </xmp></code></pre>
 <!-- ==================================== -->
@@ -514,7 +538,7 @@ myJSParser('js-basicTrigger', 'res-basicTrigger');
     <li>If there is something wrong, it will give notification in the <u>console</u>.</li>
     <li>Usually you can open the console with <u>right click</u> -> <u>inspect element</u></li>
     <li>You can output stuff in the console using the <code>console.log("sometext")</code> in your javascript code</li>
-    <li>This is obvious for people coming from web development. But is'nt for people coming from other field (R?). It is essential to be able to debug your code.</li>
+    <li>This is obvious for people coming from web development. But isn't for people coming from other field (R?). It is essential to be able to debug your code.</li>
   </ul>
 </div>
 </section>
@@ -563,7 +587,7 @@ myJSParser('js-basicTrigger', 'res-basicTrigger');
 <svg id="dataviz_area" height=200 width=450></svg>
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 </xmp></code></pre>
 <!-- ==================================== -->
@@ -671,7 +695,7 @@ myJSParser('js-coord', 'res-coord');
 <svg id="viz_area" height=200 width=450></svg>
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 </xmp></code></pre>
 <!-- ==================================== -->
@@ -788,7 +812,7 @@ myJSParser('js-scale', 'res-scale');
 <svg id="Viz_area" height=200 width=450></svg>
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 </xmp></code></pre>
 <!-- ==================================== -->
@@ -904,7 +928,7 @@ myJSParser('js-axis', 'res-axis');
 <div id="Area"></div>
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 </xmp></code></pre>
 <!-- ==================================== -->
@@ -1021,7 +1045,7 @@ myJSParser('js-margin', 'res-margin');
     <li><u>Binding data</u> to svg elements is the last step we need to complete the scatterplot. It is also the <u>hardest</u> part to understand in my opinion.</li>
     <li>It always follows the same steps:</li>
     <ul>
-      <li><code>svg</code>: this select the svg area where the chart takes place</code></li>
+      <li><code>svg</code>: this select the svg area where the chart takes place</li>
       <li><code>.selectAll("whatever")</code>: select all the elements that have not be created yet, I know it is weird.</li>
       <li><code>.data(data)</code>: specify the data to use.</li>
       <li><code>.enter()</code>: start a loop for the data. Following code will be applied to <code>data[0]</code>, <code>data[1]</code> and so on.</li>
@@ -1053,7 +1077,7 @@ myJSParser('js-margin', 'res-margin');
 <div id="scatter_area"></div>
 
 <!-- Load d3.js -->
-<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 
 </xmp></code></pre>
 <!-- ==================================== -->
